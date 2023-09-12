@@ -1,0 +1,16 @@
+<template>
+    <lightning-card icon-name="custom:custom11"  title="Conditional Directives">
+        <div class="slds-p-left_x-large">
+            
+            <lightning-input
+            type="checkbox"
+            label="Show Picture"
+            onchange={handleChange}
+          ></lightning-input>
+          <template lwc:if={isVisible}>
+            <div><img src={pictureUrl} width="400" height="500"/></div>
+            <div class="slds-m-vertical_medium">Pi-kaPika</div>
+          </template>
+        </div>
+    </lightning-card>
+</template>
